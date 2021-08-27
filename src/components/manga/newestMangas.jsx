@@ -3,7 +3,7 @@ import React from 'react'
 const NewestMangas = () => {
     return (
         <div>
-            
+            BNews
         </div>
     )
 }

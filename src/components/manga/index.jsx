@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NotFound = () => {
+const HomeMangas = () => {
     return (
         <div>
-            VACIO
+            Home
         </div>
     )
 }
 
-export default NotFound
+export default HomeMangas

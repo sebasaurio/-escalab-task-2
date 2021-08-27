@@ -1,0 +1,23 @@
+.header-options{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-options{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header-option {
+    padding: 10px 15px;
+    cursor: pointer; 
+    text-decoration: none;  
+    color : #212121;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
