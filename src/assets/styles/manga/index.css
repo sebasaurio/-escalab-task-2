@@ -1,0 +1,22 @@
+.random{
+    width: 100%;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-title{
+
+}
+
+.reload-title{
+    font-size: 18px;
+}
+
+
+.random-mangas{
+
+}

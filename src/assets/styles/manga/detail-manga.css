@@ -1,0 +1,42 @@
+.detail-manga{
+    
+}
+
+.header-manga{
+    margin: 15px 0 10px 0;
+}
+
+.en-title{
+    font-size: 22px;
+}
+
+.en-jp-tittle{
+    font-size: 20px;
+}
+
+.body-manga{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-manga{
+    width: 100%;
+}
+
+.description-manga{
+    display: flex;
+    flex-direction: column;
+}
+
+.description-text{
+    font-size: 18px;
+}
+
+.actions-manga{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
