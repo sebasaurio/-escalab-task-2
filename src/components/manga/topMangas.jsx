@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 
-import {Grid} from '@material-ui/core'
+import {Typography, Box} from '@material-ui/core'
 
 import {MangaContext} from './../../contexts/MangaContext'
 import DetailsManga from './detailsManga'
@@ -9,16 +9,24 @@ import Loading from './../common/loading'
 
 const TopMangas = () => {
 
-    const {doneFetchTrendingManga, trendingManga} = useContext(MangaContext)
+    const {doneFetchTrendingManga, trendingManga,handleToReadManga} = useContext(MangaContext)
 
     return (
-        <div>
+        <Box mt={2}>
             {
                 doneFetchTrendingManga
-                ? <DetailsManga mangas={trendingManga} format='list'/>
+                ? (
+                    <>
+                        <Typography align='center' gutterBottom variant='h5'>
+                            Top mangas read by the community
+                        </Typography>
+                        <DetailsManga mangas={trendingManga} format='list' onClickEvent={handleToReadManga}/>
+                    </>
+                    
+                )
                 : <Loading/>
             }
-        </div>
+        </Box>
     )
 }
 

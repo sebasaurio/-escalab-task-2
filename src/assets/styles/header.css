@@ -1,6 +1,7 @@
 .header-options{
     display: flex;
     flex-direction: row;
+    background-color: #53a3a2;
 }
 
 .header-options{

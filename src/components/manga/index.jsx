@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import {Grid} from '@material-ui/core'
+import {Grid, Typography,Box} from '@material-ui/core'
 
 import {MangaContext} from './../../contexts/MangaContext'
 import DetailsManga from './detailsManga'
@@ -15,10 +15,10 @@ const HomeMangas = () => {
 
     return (
         <div className='random'>
-            <div className='title'>
-                <h2 className='header-title'>Discover new mangas to read!</h2>
-                <h3 className='reload-title'>reload to get random mangas <Replay></Replay></h3> 
-            </div>
+            <Box mt={2} className='title'>
+                <Typography variant='h4' align='center' className='header-title' gutterBottom>Discover new mangas to read!</Typography>
+                <Typography variant='h6' align='right' className='reload-title' gutterBottom>reload to get random mangas <Replay/></Typography> 
+            </Box>
             <Grid 
                 container 
                 direction="row" 

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import {AppBar, Toolbar, Button} from '@material-ui/core'
 import {Book} from '@material-ui/icons'
 
-import logo from './../../assets/static/images/logo.png'
 import './../../assets/styles/header.css'
 
 const Header = () => (   

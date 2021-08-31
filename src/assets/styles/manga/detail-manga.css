@@ -1,9 +1,12 @@
 .detail-manga{
-    
+    width: 100%;
+    height: 100%;
 }
 
 .header-manga{
     margin: 15px 0 10px 0;
+    padding: 0 10px 0 10px;
+    font-weight: bold;
 }
 
 .en-title{
@@ -17,15 +20,19 @@
 .body-manga{
     display: flex;
     flex-direction: column;
+    padding: 0 10px 0 10px;
 }
 
 .image-manga{
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .description-manga{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 .description-text{

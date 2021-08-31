@@ -1,23 +1,34 @@
 import React from 'react'
 
-import {Grid} from '@material-ui/core'
+import {GridList, GridListTile} from '@material-ui/core'
 
 import DetailManga from './detailManga'
 
-const DetailsManga = ({mangas, onClickEvent, format = 'card'}) => {
+const DetailsManga = ({mangas, onClickEvent, format = 'card', action}) => {
     return (
-        <Grid container direction='row' justifyContent='space-around' alignItems='flex-start'>
+        <GridList className='list-manga' 
+            cols={2}
+            cellHeight='auto'
+            spacing={20}
+        >
             {
                 mangas.map((manga) => (
-                    <DetailManga
-                        key={manga.id} 
-                        manga={manga} 
-                        format={format}
-                        onClickEvent={onClickEvent}
-                        />
-                    ))
+                    <GridListTile key={manga.id} 
+                        cols={1}
+                        rows={2}
+                        >
+                        <DetailManga
+                            key={manga.id} 
+                            manga={manga} 
+                            format={format}
+                            action={action}
+                            onClickEvent={onClickEvent}
+                            />
+                        ))
+                    </GridListTile>
+                ))    
             }
-        </Grid>
+        </GridList>
     )
 }
 

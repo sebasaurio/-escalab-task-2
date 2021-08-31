@@ -17,6 +17,7 @@ const MangaContextProvider = ({children}) => {
 
     const [toReadManga, setToReadManga] = useState([])
 
+    //TODO: Llamar use effect cuando cambie la ruta
     useEffect(() => {
         getRandomManga()
     },[])
@@ -30,9 +31,11 @@ const MangaContextProvider = ({children}) => {
     },[])
 
     const handleToReadManga = (manga) => {
-        console.log(manga)
-        setToReadManga([...toReadManga, manga])
-        console.log(toReadManga)
+        setToReadManga([...new Set([...toReadManga, manga])])
+    }
+
+    const handleToRemoveManga = (removedManga) => {
+        setToReadManga([...new Set(toReadManga.filter(manga => manga.id !== removedManga.id))])
     }
 
     const getRandomManga = async () => {
@@ -86,7 +89,8 @@ const MangaContextProvider = ({children}) => {
                 doneFetchNewestManga,
                 newestManga,
                 toReadManga,
-                handleToReadManga
+                handleToReadManga,
+                handleToRemoveManga
             }}>
             {children}
         </MangaContext.Provider>
