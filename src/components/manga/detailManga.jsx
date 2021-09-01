@@ -26,13 +26,16 @@ const getAction = (type) => {
     return actions[type] || actions['default']
 }
 
-const DetailManga = ({manga, format, onClickEvent, action}) => {
+const DetailManga = ({manga, onClickEvent, action}) => {
 
     const selectedAction = getAction(action)
     const {attributes} = manga
 
-    const {createdAt, updatedAt, titles, status, posterImage, chapterCount, volumneCount} = attributes
+    const {createdAt, updatedAt, titles, status, posterImage, chapterCount, volumeCount} = attributes
     const {medium} = posterImage
+
+    const createdAtDate = new Date(createdAt)
+    const updatedAtDate = new Date(updatedAt)
 
     return (
         <Paper
@@ -55,11 +58,11 @@ const DetailManga = ({manga, format, onClickEvent, action}) => {
                 </div>
                 <Divider/>
                 <div className='description-manga'>
-                    <span className='description-text'><strong>Created at:</strong> {createdAt.toString()}</span>
-                    <span className='description-text'><strong>Last update:</strong> {updatedAt.toString()}</span>
+                    <span className='description-text'><strong>Created at:</strong> {createdAtDate.getDate() + "/" + (createdAtDate.getMonth() + 1) + "/" + createdAtDate.getFullYear()}</span>
+                    <span className='description-text'><strong>Last update:</strong> {updatedAtDate.getDate() + "/" + (updatedAtDate.getMonth() + 1) + "/" + updatedAtDate.getFullYear()}</span>
                     <span className='description-text'><strong>Current status: </strong>{status.toUpperCase()}</span>
                     {chapterCount && <span className='description-text'><strong>Chapters:</strong> {chapterCount}</span>}
-                    {volumneCount && <span className='description-text'><strong>Volums: </strong>{volumneCount}</span>}
+                    {volumeCount && <span className='description-text'><strong>Volums: </strong>{volumeCount}</span>}
                 </div>
                 <div className='actions-manga'>
                     <CustomButton 

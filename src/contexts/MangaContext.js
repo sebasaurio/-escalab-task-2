@@ -17,7 +17,7 @@ const MangaContextProvider = ({children}) => {
 
     const [toReadManga, setToReadManga] = useState([])
 
-    //TODO: Llamar use effect cuando cambie la ruta
+    //TODO: Llamar use effect cuando cambie la ruta, si encuentran info o me ayudan con este seria genial! gracias!
     useEffect(() => {
         getRandomManga()
     },[])

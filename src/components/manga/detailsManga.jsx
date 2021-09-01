@@ -4,10 +4,10 @@ import {GridList, GridListTile} from '@material-ui/core'
 
 import DetailManga from './detailManga'
 
-const DetailsManga = ({mangas, onClickEvent, format = 'card', action}) => {
+const DetailsManga = ({mangas, onClickEvent, action}) => {
     return (
         <GridList className='list-manga' 
-            cols={2}
+            cols={mangas.length === 1 ? 1 : 2}
             cellHeight='auto'
             spacing={20}
         >
@@ -20,7 +20,6 @@ const DetailsManga = ({mangas, onClickEvent, format = 'card', action}) => {
                         <DetailManga
                             key={manga.id} 
                             manga={manga} 
-                            format={format}
                             action={action}
                             onClickEvent={onClickEvent}
                             />

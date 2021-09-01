@@ -16,7 +16,7 @@ const ReadMangas = () => {
                         <Typography align='center' gutterBottom variant='h5'>
                             Mangas saved for later reading
                         </Typography>
-                        <DetailsManga mangas={toReadManga} format='list' action='delete' onClickEvent={handleToRemoveManga}/>
+                        <DetailsManga mangas={toReadManga} action='delete' onClickEvent={handleToRemoveManga}/>
                     </>
                 )
                 : (

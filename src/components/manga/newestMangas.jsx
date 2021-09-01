@@ -19,7 +19,7 @@ const NewestMangas = () => {
                         <Typography align='center' gutterBottom variant='h5'>
                             New mangas published
                         </Typography>
-                        <DetailsManga mangas={newestManga} format='list' onClickEvent={handleToReadManga}/>
+                        <DetailsManga mangas={newestManga} onClickEvent={handleToReadManga}/>
                     </>
                 )
                 : <Loading/>

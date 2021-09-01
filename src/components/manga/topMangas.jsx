@@ -20,7 +20,7 @@ const TopMangas = () => {
                         <Typography align='center' gutterBottom variant='h5'>
                             Top mangas read by the community
                         </Typography>
-                        <DetailsManga mangas={trendingManga} format='list' onClickEvent={handleToReadManga}/>
+                        <DetailsManga mangas={trendingManga} onClickEvent={handleToReadManga}/>
                     </>
                     
                 )
