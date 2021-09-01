@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Tarea del curso de Escalab - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto a sido creado con create-react-app (https://create-react-app.dev/docs/getting-started/)
 
-## Available Scripts
+## Lista de Mangas
 
-In the project directory, you can run:
+Esta app consume la siguiente API: https://kitsu.docs.apiary.io/# para obtener una lista de mangas consumiendo distintos endpoints.
 
-### `npm start`
+Esta api es publica y es posible consumirla sin la necesidad de utilizar un metodo de autenticación, de todas formas al registrar la app en el servicio las funcionalidades se extienden, para este caso, no fue necesario registrar la app, se implementaron metodos que no requieren registro.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Es posible visualizar 
+  1. Una lista aleatoria de mangas
+  2. Top mangas
+  3. Ultimos mangas publicados
+  4. Mangas seleccionados para leer
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Tecnologias
 
-### `npm test`
+Esta app utiliza **React-Router-Dom** para el manejo de rutas entre los componentes.
+El manejo de estilos, fue realizado con **Material-UI** y **Clases css** personalizadas.
+Se implementó el manejo de errores, **Error Boundary**, para el componente Index de Mangas.
+Para el manejo de Estados y el paso de datos entre componentes padre e hijos se implementó **ContextAPI**, con esto manejamos de forma global las props entre el arbol de componentes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Se utilizó el patron de diseño **Provider** para manejar las props y sus estados entre el arbol de componentes
+Ademas de **HOC** para el manejo de rutas y control de errores
 
-### `npm run build`
+#
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Proyecto realizado por Sebastian Cardoza - 2021-08
