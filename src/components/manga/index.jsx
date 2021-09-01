@@ -1,9 +1,11 @@
 import React,{useContext} from 'react'
-import {Grid, Typography, Box, IconButton} from '@material-ui/core'
+import {Grid, Typography, Box} from '@material-ui/core'
 
 import {MangaContext} from './../../contexts/MangaContext'
 import DetailsManga from './detailsManga'
 import Loading from './../common/loading'
+
+import ErrorBoundary from '../../hoc/errorBoundary'
 
 import {Replay} from '@material-ui/icons'
 
@@ -25,11 +27,16 @@ const HomeMangas = () => {
                 justifyContent="center" 
                 alignItems="center"
                 className='random-mangas'>
-                {
-                    doneFetchRandomManga 
-                    ? <DetailsManga mangas={randomManga} onClickEvent={handleToReadManga}/>
-                    : <Loading text='we are selecting random mangas for you'/>
-                }
+                
+                <ErrorBoundary>
+                    {
+                        doneFetchRandomManga 
+                        ? <DetailsManga mangas={randomManga} onClickEvent={handleToReadManga}/>
+                        : <Loading text='we are selecting random mangas for you'/>
+                    }
+                </ErrorBoundary>
+                    
+                
             </Grid>
         </div>
     )
