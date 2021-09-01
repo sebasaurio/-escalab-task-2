@@ -1,8 +1,10 @@
 import React from 'react'
 import {CircularProgress} from '@material-ui/core'
 
+import './../../assets/styles/loading.css'
+
 const Loading = ({text}) => (
-    <div>
+    <div className='loading'>
         {
             text && <h2>{text}</h2>
         }

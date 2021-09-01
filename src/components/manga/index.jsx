@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import {Grid, Typography,Box} from '@material-ui/core'
+import {Grid, Typography, Box, IconButton} from '@material-ui/core'
 
 import {MangaContext} from './../../contexts/MangaContext'
 import DetailsManga from './detailsManga'
@@ -11,13 +11,13 @@ import './../../assets/styles/manga/index.css'
 
 const HomeMangas = () => {
 
-    const {doneFetchRandomManga, randomManga, handleToReadManga} = useContext(MangaContext)
+    const {doneFetchRandomManga, randomManga, handleToReadManga, handleGetRandomManga} = useContext(MangaContext)
 
     return (
         <div className='random'>
             <Box mt={2} className='title'>
                 <Typography variant='h4' align='center' className='header-title' gutterBottom>Discover new mangas to read!</Typography>
-                <Typography variant='h6' align='right' className='reload-title' gutterBottom>reload to get random mangas <Replay/></Typography> 
+                <Typography variant='h6' align='right' className='reload-title' gutterBottom>reload to get random mangas <Replay onClick={() => handleGetRandomManga()}/></Typography> 
             </Box>
             <Grid 
                 container 

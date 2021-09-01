@@ -1,6 +1,6 @@
 import React, {createContext, useState, useEffect} from 'react'
 
-import {getMangas, getTrendingMangas} from './../constants/index'
+import {getNewestMangas, getTrendingMangas, getRandomMangas, CATEGORIES} from './../constants/index'
 
 export const MangaContext = createContext()
 
@@ -38,9 +38,15 @@ const MangaContextProvider = ({children}) => {
         setToReadManga([...new Set(toReadManga.filter(manga => manga.id !== removedManga.id))])
     }
 
+    const handleGetRandomManga =() => {
+        setDoneFetchRandomManga(false)
+        getRandomManga()
+    } 
+
     const getRandomManga = async () => {
-        try {           
-            const response = await fetch(getMangas(), {
+        try {
+            const pickedCategory = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)]
+            const response = await fetch(getRandomMangas(pickedCategory), {
                 method: 'GET'
             })
             const data = await response.json()
@@ -67,7 +73,7 @@ const MangaContextProvider = ({children}) => {
 
     const getNewestManga = async () => {
         try {
-            const response = await fetch(getMangas(),{
+            const response = await fetch(getNewestMangas(),{
                 method: 'GET'
             })
             const data = await response.json()
@@ -90,7 +96,8 @@ const MangaContextProvider = ({children}) => {
                 newestManga,
                 toReadManga,
                 handleToReadManga,
-                handleToRemoveManga
+                handleToRemoveManga,
+                handleGetRandomManga
             }}>
             {children}
         </MangaContext.Provider>
