@@ -11,7 +11,7 @@ const Footer = () => {
                     &copy; 2021, Sebastian Cardoza
                 </Typography>
                 <Typography  variant="h6" align="center" gutterBottom>
-                    Tarea 2 Escalab &nbsp;-&nbsp; <a href="https://github.com/sebasaurio/escalab-task-1" target="_blank" rel="noopener noreferrer"> View Code</a>
+                    Tarea 2 Escalab &nbsp;-&nbsp; <a href="https://github.com/sebasaurio/escalab-task-2" target="_blank" rel="noopener noreferrer"> View Code</a>
                 </Typography>
             </Container>
         </footer>
