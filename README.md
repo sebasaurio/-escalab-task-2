@@ -4,7 +4,7 @@ Este proyecto a sido creado con create-react-app (https://create-react-app.dev/d
 
 ## Lista de Mangas
 
-Esta app consume la siguiente API: https://kitsu.docs.apiary.io/# para obtener una lista de mangas consumiendo distintos endpoints.
+Esta app consume la siguiente API: https://kitsu.docs.apiary.io/# para obtener una lista de mangas utilizando distintos endpoints.
 
 Esta api es publica y es posible consumirla sin la necesidad de utilizar un metodo de autenticación, de todas formas al registrar la app en el servicio las funcionalidades se extienden, para este caso, no fue necesario registrar la app, se implementaron metodos que no requieren registro.
 
